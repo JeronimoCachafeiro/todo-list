@@ -1,0 +1,1 @@
+(()=>{"use strict";const o=[];({title:"A title",description:"A description",dueDate:"Tomorrow",priority:"Top priority",addToProject:function(o){o.push(this)}}).addToProject(o),console.log(o)})();
