@@ -1,4 +1,4 @@
-const content = document.querySelector("#content");
+const content = document.querySelector(".content");
 
 const renderTodos = (project) => {
   let projectCard = document.createElement("div");
