@@ -1,6 +1,6 @@
 import { Todo } from "../src/todo.js";
 import { defaultProject } from "./project";
-import { renderTodos } from "./ui.js";
+import { renderTodos, editTodoTitle } from "./ui.js";
 
 const todo1 = Todo("A title", "A description", "Tomorrow", "Top priority");
 todo1.addToProject(defaultProject);
@@ -16,3 +16,4 @@ todo4.addToProject(defaultProject);
 console.log(defaultProject);
 
 renderTodos(defaultProject);
+editTodoTitle(todo1);

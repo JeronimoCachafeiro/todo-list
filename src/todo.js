@@ -1,3 +1,5 @@
+
+
 const Todo = (title, description, dueDate, priority) => {
   return {
     title,
@@ -6,8 +8,9 @@ const Todo = (title, description, dueDate, priority) => {
     priority,
     addToProject: function (project) {
       project.push(this);
-    },
+    }, 
   };
 };
+
 
 export { Todo };

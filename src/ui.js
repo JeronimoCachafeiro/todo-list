@@ -8,6 +8,7 @@ const renderTodos = (project) => {
     todoCard.classList.add("todo");
 
     const title = document.createElement("p");
+    title.setAttribute("contenteditable", "true");
     title.classList.add("title");
     title.textContent = todo.title;
     todoCard.appendChild(title);
@@ -17,4 +18,13 @@ const renderTodos = (project) => {
   content.appendChild(projectCard);
 };
 
-export { renderTodos };
+const editTodoTitle = (todo) => {
+  content.addEventListener("input", (e) => {
+    if (e.target.matches("p.title")){
+      todo.title = e.target.textContent;
+      console.log(todo);
+    }
+    
+  });
+};
+export { renderTodos, editTodoTitle };
