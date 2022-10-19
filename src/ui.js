@@ -20,11 +20,13 @@ const renderTodos = (project) => {
 
 const editTodoTitle = (todo) => {
   content.addEventListener("input", (e) => {
-    if (e.target.matches("p.title")){
-      todo.title = e.target.textContent;
-      console.log(todo);
-    }
+    // if (e.target.matches("p.title")){
+    //   todo.title = e.target.textContent;
+    //   console.log(todo);
+    //   console.log(e);
+    // }
     
   });
 };
+
 export { renderTodos, editTodoTitle };
