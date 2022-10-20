@@ -1,6 +1,6 @@
-import { editTitle, Todo } from "../src/todo.js";
+import { Todo, editTitle } from "../src/todo.js";
 import { defaultProject } from "./project";
-import { renderTodos, editTodoTitle } from "./ui.js";
+import { renderTodos, checkInputs } from "./ui.js";
 
 const todo1 = Todo();
 todo1.addToProject(defaultProject);
@@ -16,4 +16,4 @@ todo4.addToProject(defaultProject);
 console.log(defaultProject);
 
 renderTodos(defaultProject);
-editTitle();
+checkInputs();
