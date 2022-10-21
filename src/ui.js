@@ -31,12 +31,23 @@ const renderTodos = (project) => {
 
 const checkInputs = function () {
   content.addEventListener("input", (e) => {
-    console.log("miauy");
     const i = e.target.parentElement.dataset.index;
     const targetKey = e.target.className;
-    console.log(e);
     defaultProject[i][targetKey] = e.target.textContent;
   });
 };
 
-export { renderTodos, checkInputs };
+const checkButtons = function () {
+  document.addEventListener("click", (e) => {
+    if (e.target.matches("button")) {
+      const newTodo = Todo();
+      defaultProject.push(newTodo);
+      console.log(defaultProject);
+      content.innerHTML = "";
+      renderTodos(defaultProject);
+    }
+    
+  })
+}
+
+export { renderTodos, checkInputs, checkButtons };
